@@ -4,7 +4,10 @@
   "description": "test_repo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "start": "node build/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q index.ts\"" 
   },
   "author": "Eri SB",
   "license": "ISC",
