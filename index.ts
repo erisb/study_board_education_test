@@ -1,5 +1,6 @@
 import express,{Express,Request,Response} from 'express';
 import dotenv from 'dotenv';
+import connection from './db/connectDB';
 
 dotenv.config();
 
@@ -11,5 +12,6 @@ app.get('/',(req: Request,res: Response) => {
 });
 
 app.listen(port,() => {
+    console.log(connection)
     console.log(`[server] : Server is running at https://localhost:${port}`);
 });
