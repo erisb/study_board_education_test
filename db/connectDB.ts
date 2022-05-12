@@ -10,11 +10,11 @@ const nameDB = process.env.DB_DATABASE as string;
 const dialectDB = process.env.DB_DIALECT as Dialect;
 
 // Option 2: Passing parameters separately (other dialects)
-const sequelize = new Sequelize(nameDB, userDB, passDB, {
+const conn = new Sequelize(nameDB, userDB, passDB, {
     host: hostDB,
     dialect: dialectDB
 });
-sequelize.authenticate().then(() => {
+conn.authenticate().then(() => {
     console.log('Connection has been established successfully.');
 })
 .catch(err => {
@@ -22,4 +22,4 @@ sequelize.authenticate().then(() => {
 });
 
 // export connection
-export default sequelize;
+export default conn;
