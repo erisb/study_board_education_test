@@ -3,6 +3,7 @@ import conn from '../connectDB'
 
 interface RoleModel extends Model<InferAttributes<RoleModel>, InferCreationAttributes<RoleModel>> {
     id_role: CreationOptional<number>;
+    kode_role: number;
     nm_role:string;
     created_by:string;
     updated_by:string;
@@ -10,12 +11,17 @@ interface RoleModel extends Model<InferAttributes<RoleModel>, InferCreationAttri
 }
 
 const RoleModel = conn.define<RoleModel>(
-    'mst_role',{
+    'mst_roles',{
         id_role:{
             allowNull: false,
             autoIncrement: true,
             primaryKey: true,
             type: DataTypes.INTEGER
+        },
+        kode_role:{
+            allowNull: false,
+            type: DataTypes.INTEGER,
+            unique:true
         },
         nm_role:{
             allowNull: false,

@@ -4,6 +4,7 @@ import dataModel from '../../db/models/model_role'
 export const saveRole = async(req:Request,res:Response) => {
     try {
         await dataModel.create({
+            kode_role:req.body.kode_role,
             nm_role:req.body.nama_role,
             created_by:req.body.created_by,
             updated_by:req.body.updated_by
