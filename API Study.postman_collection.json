@@ -1,0 +1,779 @@
+{
+	"info": {
+		"_postman_id": "4e9b132f-00ec-46be-8ff7-94b4ce3931b7",
+		"name": "API Study",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Save Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNDg4NjYzLCJleHAiOjE2NTI0ODg3MjN9.IdI8yp9wiyAnfOu4iwK-A6iX4o2wdUvhkTfvSdvrp8c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kode_role\":2,\r\n    \"nama_role\":\"Operator\",\r\n    \"created_by\":\"Eri Setiadi\",\r\n    \"updated_by\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/role",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoicm9vdCIsImlhdCI6MTY1MjY4NjI4NSwiZXhwIjoxNjUyNjg2MzQ1fQ.4yjLYIgnvjiaUMvRPZKF3QN00KgrVn_qyd4GmiIUs8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kode_role\":2,\r\n    \"nama_role\":\"User Biasa\",\r\n    \"updated_by\":\"Eri Setiadi\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/role/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoicm9vdCIsImlhdCI6MTY1MjY4NjI4NSwiZXhwIjoxNjUyNjg2MzQ1fQ.4yjLYIgnvjiaUMvRPZKF3QN00KgrVn_qyd4GmiIUs8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/role/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoicm9vdCIsImlhdCI6MTY1MjY4NjI4NSwiZXhwIjoxNjUyNjg2MzQ1fQ.4yjLYIgnvjiaUMvRPZKF3QN00KgrVn_qyd4GmiIUs8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaTAzIiwicGFzc3dvcmQiOiJnYW50ZW5nIiwiaWF0IjoxNjUyNjkwMjc3LCJleHAiOjE2NTI2OTAzMzd9.mgihcPwt7h1yWYqab2KBQKvDDV81WMKhIRd2gQgtsgQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_user\":\"Eri Setiadi Budiawan\",\r\n    \"username\":\"eri03\",\r\n    \"password\":\"ganteng123\",\r\n    \"role\":2,\r\n    \"updated_by\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save User Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoicm9vdCIsImlhdCI6MTY1MjY4NjI4NSwiZXhwIjoxNjUyNjg2MzQ1fQ.4yjLYIgnvjiaUMvRPZKF3QN00KgrVn_qyd4GmiIUs8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_user\":\"Eri Setiadi Budiawan\",\r\n    \"username\":\"eri03\",\r\n    \"password\":\"oke\",\r\n    \"role\":1,\r\n    \"created_by\":\"Eri Setiadi\",\r\n    \"updated_by\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save User Biasa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNzEzNDIzLCJleHAiOjE2NTI3MTM3MjN9.zk1wmLAv9nPD8RJiGm3ivtQVqeUQPw28ccgLkIVaZ5E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_user\":\"Eri Setiadi Budiawan\",\r\n    \"username\":\"eri02\",\r\n    \"password\":\"oke\",\r\n    \"created_by\":\"Eri Setiadi\",\r\n    \"updated_by\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/biasa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"biasa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"eri02\",\r\n    \"password\":\"oke\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":9\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/refresh/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"refresh",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Soal",
+			"item": [
+				{
+					"name": "Save Soal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoicm9vdCIsImlhdCI6MTY1MjY5MjIzOCwiZXhwIjoxNjUyNjkyNTM4fQ.zZZHQX7DzKHt2n0DuHLAwMcOmVJGwysArA-uzvvqQow",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail_soal\":\"keren\",\r\n    \"pilihan_jawaban\":\"A.180, B.167, C.155, D.200\",\r\n    \"kunci_jawaban\":\"B\",\r\n    \"created_by\":\"Admin\",\r\n    \"updated_by\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/soal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"soal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Soal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoicm9vdCIsImlhdCI6MTY1MjY5MTkyMSwiZXhwIjoxNjUyNjkyMjIxfQ.YfF7OBwy3uXSHfkdnmhe0EWEF_vR5t55z9bvqYLdO4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail_soal\":\"berapa tinggi aku?\",\r\n    \"pilihan_jawaban\":\"A.180, B.167, C.155, D.190\",\r\n    \"kunci_jawaban\":\"B\",\r\n    \"updated_by\":\"Admin\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/soal/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"soal",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Soal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoicm9vdCIsImlhdCI6MTY1MjY5MjIzOCwiZXhwIjoxNjUyNjkyNTM4fQ.zZZHQX7DzKHt2n0DuHLAwMcOmVJGwysArA-uzvvqQow",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/soal/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"soal",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Soal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNzA0Nzc2LCJleHAiOjE2NTI3MDUwNzZ9.1z2JMUac7-bE1UQNSL1Iyu8rFc8VzxkF1iib92DOcUE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/soal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"soal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soal Belum dijawab (by user)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNzA2NDA5LCJleHAiOjE2NTI3MDY3MDl9.v7xJdO6kK7aceeAGB1V92A_bWOZ1nhDm5J9FKIjiRY8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\":6\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/soal/not/answered",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"soal",
+								"not",
+								"answered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soal sudah dijawab (by user)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNzExMzA4LCJleHAiOjE2NTI3MTE2MDh9.7yRa_khDZxi-U4roa8TX839a-TIM2aA8if_-FCHVzsc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\":6\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/soal/answered",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"soal",
+								"answered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Nilai User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNzEzODY1LCJleHAiOjE2NTI3MTQxNjV9.9-fiX4XuoEMfG5xcZqv3VVgkvp5RxgZVIm87sJk-vmE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/nilai/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"nilai",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jawaban",
+			"item": [
+				{
+					"name": "Save Jawaban",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNzEzNzk5LCJleHAiOjE2NTI3MTQwOTl9.VGzcdQ2Tsd-AV0usZ4TyjMhiWOUwW6P8FrRS10QL0fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"soal\":4,\r\n    \"user\":9,\r\n    \"jawaban\":\"B\",\r\n    \"created_by\":\"user\",\r\n    \"updated_by\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/jawaban",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jawaban"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Jawaban",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNjk1Mzg2LCJleHAiOjE2NTI2OTU2ODZ9.yNg101GefoMoI2_AvUEAvzIo75TSGx4oRbplwBmijjA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"soal\":2,\r\n    \"user\":6,\r\n    \"jawaban\":\"D\",\r\n    \"updated_by\":\"user\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/jawaban/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jawaban",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Jawaban",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaV9zYiIsInBhc3N3b3JkIjoiJDJiJDEwJDA1UGh4bVY0TVlZV2laRDl2QlVDNi4vZEF5ZGYzYS55OTN3S3FXVnprb3BjR2lsVnU2VmlTIiwiaWF0IjoxNjUyNjk1MDc2LCJleHAiOjE2NTI2OTUzNzZ9.Q88ohNKM1ZcxLl8zPcP0NApW1ctuW58GoKcicdL2rL4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/jawaban/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"jawaban",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
