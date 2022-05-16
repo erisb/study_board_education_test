@@ -1,0 +1,64 @@
+CREATE TABLE `mst_roles` (
+  `id_role` int NOT NULL AUTO_INCREMENT,
+  `kode_role` int NOT NULL,
+  `nm_role` varchar(200) NOT NULL,
+  `created_by` varchar(500) NOT NULL,
+  `updated_by` varchar(500) NOT NULL,
+  `createdAt` timestamp NOT NULL,
+  `updatedAt` timestamp NOT NULL,
+  PRIMARY KEY (`id_role`),
+  UNIQUE KEY `mst_roles_un` (`kode_role`),
+  KEY `mst_role_nm_role_IDX` (`nm_role`,`id_role`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `mst_users` (
+  `id_user` int NOT NULL AUTO_INCREMENT,
+  `nm_user` varchar(500) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(500) NOT NULL,
+  `access_token` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `refresh_token` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `role` int NOT NULL,
+  `created_by` varchar(500) NOT NULL,
+  `updated_by` varchar(500) NOT NULL,
+  `createdAt` timestamp NOT NULL,
+  `updatedAt` timestamp NOT NULL,
+  PRIMARY KEY (`id_user`),
+  UNIQUE KEY `mst_users_un` (`username`),
+  KEY `mst_users_id_user_IDX` (`id_user`,`nm_user`,`username`,`role`) USING BTREE,
+  KEY `mst_users_FK` (`role`),
+  CONSTRAINT `mst_users_FK` FOREIGN KEY (`role`) REFERENCES `mst_roles` (`kode_role`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `mst_soals` (
+  `id_soal` int NOT NULL AUTO_INCREMENT,
+  `detail` text NOT NULL,
+  `pilihan_jwbn` text NOT NULL,
+  `kunci_jwbn` varchar(10) NOT NULL,
+  `created_by` varchar(500) NOT NULL,
+  `updated_by` varchar(500) NOT NULL,
+  `createdAt` timestamp NOT NULL,
+  `updatedAt` timestamp NOT NULL,
+  PRIMARY KEY (`id_soal`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `jawaban_users` (
+  `id_jwbn` int NOT NULL AUTO_INCREMENT,
+  `id_soal` int NOT NULL,
+  `id_user` int NOT NULL,
+  `jawaban` varchar(10) NOT NULL,
+  `nilai` varchar(10) NOT NULL,
+  `created_by` varchar(500) NOT NULL,
+  `updated_by` varchar(500) NOT NULL,
+  `createdAt` timestamp NOT NULL,
+  `updatedAt` timestamp NOT NULL,
+  PRIMARY KEY (`id_jwbn`),
+  KEY `jawaban_users_FK_1` (`id_user`),
+  KEY `jawaban_users_id_jwbn_IDX` (`id_jwbn`,`id_user`,`id_soal`) USING BTREE,
+  KEY `jawaban_users_FK` (`id_soal`),
+  CONSTRAINT `jawaban_users_FK` FOREIGN KEY (`id_soal`) REFERENCES `mst_soals` (`id_soal`),
+  CONSTRAINT `jawaban_users_FK_1` FOREIGN KEY (`id_user`) REFERENCES `mst_users` (`id_user`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
