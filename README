@@ -1,1 +1,24 @@
 Cara menjalankan source code :
+
+1.Buat database di mysql
+2.Copas DDL ke mysql lalu run
+3.Buat file .env
+4.Copas isi file dibawah ini ke .env :
+
+PORT=3000
+
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=<silahkan diisi>
+DB_USERNAME=<silahkan diisi>
+DB_PASSWORD=<silahkan diisi>
+DB_DIALECT=mysql
+
+ACCESS_JWT_SECRET=<silahkan diisi>
+ACCESS_JWT_LIFE=5m
+REFRESH_JWT_SECRET=<silahkan diisi>
+REFRESH_JWT_LIFE=1d
+
+6.Buat folder build
+5.Jalankan npm install
+7.Jalankan npm run dev
