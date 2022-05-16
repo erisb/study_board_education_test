@@ -8,8 +8,8 @@ interface UserModel extends Model<InferAttributes<UserModel>, InferCreationAttri
     username:string;
     password:string;
     role:number;
-    access_token:CreationOptional<string>;
-    refresh_token:CreationOptional<string>;
+    access_token:CreationOptional<string> | null;
+    refresh_token:CreationOptional<string> | null;
     created_by:string;
     updated_by:string;
     

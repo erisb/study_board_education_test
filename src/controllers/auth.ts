@@ -79,10 +79,10 @@ export const logout = async function(req:Request,res:Response){
             raw:true
         });
         
-        if (dataUser.count > 0 && dataUser.rows[0].access_token !== '') {
+        if (dataUser.count > 0 && dataUser.rows[0].access_token !== null) {
             await dataModel.update({
-                    access_token:'',
-                    refresh_token:'',
+                    access_token:null,
+                    refresh_token:null,
                     updated_by:dataUser.rows[0].nm_user
                 }
                 ,{where:{id_user: id}

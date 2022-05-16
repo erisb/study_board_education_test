@@ -2,6 +2,7 @@ import express from 'express';
 import Req from '../middleware/reqMiddle'
 import Auth from '../middleware/authMiddle'
 import checkAdmin from '../middleware/checkAdminMiddle'
+import checkLogin from '../middleware/checkLoginMiddle'
 import { saveRole,editRole,deleteRole } from "../controllers/role";
 import { saveUserAdmin,saveUserBiasa,editUser,deleteUser } from "../controllers/user";
 import { login,logout,refreshToken } from "../controllers/auth"
@@ -21,7 +22,7 @@ routerApi.post('/user/biasa',Auth,Req,saveUserBiasa)
 routerApi.put('/user/:id',Auth,checkAdmin,Req,editUser)
 routerApi.delete('/user/:id',Auth,checkAdmin,deleteUser)
 
-routerApi.post('/login',Req,login)
+routerApi.post('/login',checkLogin,Req,login)
 routerApi.post('/logout',Req,logout)
 routerApi.post('/refresh/token',Req,refreshToken)
 

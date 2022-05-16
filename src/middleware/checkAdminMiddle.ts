@@ -1,16 +1,14 @@
 import {Request,Response,NextFunction} from 'express'
 import dotenv from 'dotenv';
 dotenv.config();
-import jwt from 'jsonwebtoken';
 import dataModel from '../../db/models/model_user';
 
-const authenticateJWT = async (req:Request, res:Response, next:NextFunction) => {
+const authenticateAdmin = async (req:Request, res:Response, next:NextFunction) => {
     const authHeader = req.headers.authorization;
 
     if (authHeader) {
-        console.log(authHeader)
         const token = authHeader.split(' ')[1];
-        console.log(token)
+        
         let dataToken = await dataModel.findAndCountAll({
             attributes:['role'],
             where:{
@@ -32,4 +30,4 @@ const authenticateJWT = async (req:Request, res:Response, next:NextFunction) => 
     }
 };
 
-export default authenticateJWT;
+export default authenticateAdmin;
