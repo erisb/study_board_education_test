@@ -3,7 +3,7 @@ import dataModel from '../../db/models/model_user'
 import bcrypt from 'bcrypt';
 const salt = 10;
 
-export const saveUser = async(req:Request,res:Response) => {
+export const saveUserAdmin = async(req:Request,res:Response) => {
     try {
         bcrypt.hash(req.body.password,salt,async function(err,hash){
             if (err) {
@@ -33,6 +33,41 @@ export const saveUser = async(req:Request,res:Response) => {
             'statusCode':'111',
             'message':'Gagal simpan data',
             'error':error
+        })
+    }
+}
+
+export const saveUserBiasa = async(req:Request,res:Response) => {
+    try {
+        bcrypt.hash(req.body.password,salt,async function(err,hash){
+            if (err) {
+                res.json({
+                    'statusCode':'111',
+                    'message':'Gagal simpan data',
+                    'error': err
+                })
+            }
+
+            await dataModel.create({
+                nm_user:req.body.nama_user,
+                username:req.body.username,
+                password:hash,
+                role:2,
+                created_by:req.body.created_by,
+                updated_by:req.body.updated_by
+            })
+            res.json({
+                'statusCode':'000',
+                'message':'Berhasil simpan data'
+            })
+        })
+        
+    } catch (Error) {
+        console.log(Error)
+        res.status(500).json({
+            'statusCode':'111',
+            'message':'Gagal simpan data',
+            'error':Error
         })
     }
 }
