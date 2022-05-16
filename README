@@ -19,6 +19,8 @@ ACCESS_JWT_LIFE=5m
 REFRESH_JWT_SECRET=<silahkan diisi>
 REFRESH_JWT_LIFE=1d
 
-6.Buat folder build
-5.Jalankan npm install
-7.Jalankan npm run dev
+5.Buat folder build
+6.Jalankan npm install
+7.Isi kode role 1 => administrator dan 2 => user biasa
+8.Silahkan import file collection json ke postman
+9.Jalankan npm run dev
